@@ -1,42 +1,76 @@
+public class Main {
+    public static void main(String[] args) {
+        //tablica jednowymiarowa
+        int tab[] = new int[7]; // [x] <--- taka sama liczba musi być w pętli
+        tab[0] = 6;
+        tab[1] = 9;
+        tab[2] = 2;
+        tab[3] = 6;
+        tab[4] = 4;
+        int z = 0;
+        //pętla for
+        for (int i = 0; i < tab.length; i++) // i<x <--- to co w new int [x] // dla tablic i<tab.length
+        {
 
-//Jest to klasa Main
-public class Main
-{
-    byte b = 127; // -128 do 127
-    short s = 32767; // -32768 do 32767
-    int i = -214783648; // -214783648 do 214783647
-    long l = 9223372036854775807l; // -9223372036854775808 do 9223372036854775807
-    float f = 3.4444444f; // -3.4*10^-38 do 3.4*10^-38
-    double d = 3.777763254454554; // -1.8*10^108 do 1.8*10^108
-    char c = 'a'; // większość liter
-    String string = "To jest jakiś tekst";
+            System.out.println("Element tablicy "+z +" = " + tab[i]);
+            z++;
+        }
 
-    public static void main (String [] args)
-    {
-        int wynik = 5;
-        System.out.println ("Wynik = "+ wynik);
+        System.out.println(); //wolna linia
+        System.out.println(); //wolna linia
+
+        int q = 0;
+        for (int x : tab) {
+            System.out.println("Tab ["+q+"] = "+x);
+            q++;
+        }
+
+        System.out.println();
         System.out.println();
 
-        int wynik2, wynik3, wynik4, wynik5;
-        int l1 = 56;
-        int l2 = 16;
-        wynik2 = l1+l2;
-        wynik3 = l1*l2;
-        wynik4 = l1/l2;
-        wynik5 = l1-l2;
-        int wynik6 = l1%l2;
+        //pętla while
+        int n = 10;
+        while (n > 0) {
+            System.out.println("Cokolwiek " + n);
+            n--;
+        }
 
-        System.out.println ("Wynik dodawania = "+wynik2);
-        System.out.println ("Wynik mnożenia = "+wynik3);
-        System.out.println ("Wynik odejmowania = "+wynik5);
-        System.out.println ("Wynik dzielenia ="+wynik4);
-        System.out.println ("Reszta z dzielenia = "+wynik6);
-        wynik6++;
-        wynik6++;
-        wynik6++;
-        System.out.println("Wynik 6 = "+wynik6);
-        wynik2--;
-        System.out.println("Wynik 2 = "+wynik2);
+        System.out.println();
+        System.out.println();
 
+        //pętla do
+        do {
+            System.out.println("Tekst");
+            n++;
+        }
+        while (n < 5);
+        {
+            System.out.println("Koniec");
+        }
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        //tablice wielowymiarowe
+
+        int table[][] = {{2, 3, 4}, {1, 2, 3}};
+
+        for (int i = 0; i < table.length; i++) {
+            for (int j = 0; j < table[i].length; j++) {
+                System.out.println(table[i][j]);
+            }
+
+        }
+
+        System.out.println();
+        System.out.println();
+        //pętla zewnętrzna wykona sie 1, a następnie po całym cyklu pętli wewnętrznej i znowu
+        for (int a=5; a>0; a--)
+        {
+            for (int b=5; b<10; b++)
+                System.out.println("Zmienna a = "+a +", zmienna b = "+b);
+
+        }
     }
 }
