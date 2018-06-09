@@ -1,76 +1,123 @@
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) {
-        //tablica jednowymiarowa
-        int tab[] = new int[7]; // [x] <--- taka sama liczba musi być w pętli
-        tab[0] = 6;
-        tab[1] = 9;
-        tab[2] = 2;
-        tab[3] = 6;
-        tab[4] = 4;
-        int z = 0;
-        //pętla for
-        for (int i = 0; i < tab.length; i++) // i<x <--- to co w new int [x] // dla tablic i<tab.length
+    public static void main (String args[])
+    {
+        int a = 7;
+
+        //wszystkie instrukcje sprawdzane razem - stop jeśli jakaś zostanie sprawdzona
+        if (a<10)
+            System.out.println("a<10");
+        else if (a==10)
+            System.out.println("a=10");
+        else if (a==9)
+            System.out.println("a=9");
+        else if (a==8)
+            System.out.println("a=8");
+        else
+            System.out.println("a>10");
+        //-----------------------------------------------------------------------------
+        //System.out.println();
+        //System.out.println();
+
+        //wykonają się wszystkie prawdziwe instrukcje
+        if (a<10)
+            System.out.println("a<10");
+        if (a==10)
+            System.out.println("a=10");
+        if (a==9)
+            System.out.println("a=9");
+        if (a==8)
+            System.out.println("a=8");
+        else
+            System.out.println("a>10");
+        //------------------------------------------------------------------------------
+
+        System.out.println();
+        System.out.println();
+
+        if (a<10) {
+            System.out.println("a<10");
+                if (a==8)
+                    System.out.println("a=8");
+                else
+                    System.out.println("a!=8");
+        }
+        //-------------------------------------------------------------------------------
+
+        //System.out.println();
+        //System.out.println();
+
+        int b = 4;
+
+        switch (b)
+
         {
-
-            System.out.println("Element tablicy "+z +" = " + tab[i]);
-            z++;
+            case 1:
+                System.out.println("b = 1");
+                break;
+            case 2:
+                System.out.println("b = 2");
+                break;
+            case 3:
+                System.out.println("b = 3");
+                break;
+            case 4:
+                System.out.println("b = 4");
+                break;
+            case 5:
+                System.out.println("b = 5");
+                break;
+            default:
+                System.out.println("Default");
+                break;
         }
+        //-------------------------------------------------------------------------------
+        //System.out.println();
+        //System.out.println();
 
-        System.out.println(); //wolna linia
-        System.out.println(); //wolna linia
+        int c = 10;
+        int d;
 
-        int q = 0;
-        for (int x : tab) {
-            System.out.println("Tab ["+q+"] = "+x);
-            q++;
-        }
+        d = c < 10 ? -1 : 1;
+        System.out.println(d);
+        //-------------------------------------------------------------------------------
 
-        System.out.println();
-        System.out.println();
+        //System.out.println();
+        //System.out.println();
 
-        //pętla while
-        int n = 10;
-        while (n > 0) {
-            System.out.println("Cokolwiek " + n);
-            n--;
-        }
-
-        System.out.println();
-        System.out.println();
-
-        //pętla do
-        do {
-            System.out.println("Tekst");
-            n++;
-        }
-        while (n < 5);
+        for (int i=0; i<10; i++)
         {
-            System.out.println("Koniec");
+            System.out.print(i + " ");
+            if (i==5)
+                break;
         }
+        //-------------------------------------------------------------------------------
 
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        //System.out.println();
+        //System.out.println();
 
-        //tablice wielowymiarowe
-
-        int table[][] = {{2, 3, 4}, {1, 2, 3}};
-
-        for (int i = 0; i < table.length; i++) {
-            for (int j = 0; j < table[i].length; j++) {
-                System.out.println(table[i][j]);
-            }
-
-        }
-
-        System.out.println();
-        System.out.println();
-        //pętla zewnętrzna wykona sie 1, a następnie po całym cyklu pętli wewnętrznej i znowu
-        for (int a=5; a>0; a--)
+        for (int i=0; i<10;i++)
         {
-            for (int b=5; b<10; b++)
-                System.out.println("Zmienna a = "+a +", zmienna b = "+b);
-
+            if (i%2==0) continue;
+            System.out.print(i + " ");
         }
+        //-------------------------------------------------------------------------------
+
+        //System.out.println();
+        System.out.println();
+
+        Scanner scanner = new Scanner(System.in);
+        //Skanowanie liter z klawiatury
+        String name;
+        int wiek;
+        System.out.print("Podaj swoje imię: ");
+        name = scanner.next();
+        System.out.print("Podaj swój wiek: ");
+        wiek = scanner.nextInt();
+        System.out.println("Masz na imię "+name +" i masz "+wiek+" lat");
+
+        //-------------------------------------------------------------------------------
+
     }
 }
